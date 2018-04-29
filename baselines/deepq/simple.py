@@ -7,13 +7,14 @@ import cloudpickle
 import numpy as np
 from tqdm import tqdm
 
-import gym
+# import gym
 import baselines.common.tf_util as U
 from baselines import logger
 from baselines.common.schedules import LinearSchedule
 from baselines import deepq
 from baselines.deepq.replay_buffer import ReplayBuffer, PrioritizedReplayBuffer
-from baselines.deepq.utils import BatchInput, load_state, save_state
+from baselines.deepq.utils import BatchInput, load_state, save_state, create_list_dirs
+from baselines.deepq.env_summary_logger import EnvSummaryLogger
 
 
 class ActWrapper(object):
@@ -98,7 +99,9 @@ def learn(env,
           prioritized_replay_beta_iters=None,
           prioritized_replay_eps=1e-6,
           param_noise=False,
-          callback=None):
+          callback=None,
+          summary_dir="tensorboard",
+          log_freq=1000):
     """Train a deepq model.
 
     Parameters
@@ -166,8 +169,13 @@ def learn(env,
     """
     # Create all the functions necessary to train the model
 
-    sess = tf.Session()
+    config = tf.ConfigProto()
+    config.gpu_options.allow_growth = True
+    sess = tf.Session(config=config)
     sess.__enter__()
+
+    # For TensorBoard
+    env_summary_logger = EnvSummaryLogger(sess, create_list_dirs(summary_dir, '-env', 1))
 
     # capture the shape outside the closure so that the env object is not serialized
     # by cloudpickle when serializing make_obs_ph
@@ -213,6 +221,7 @@ def learn(env,
     U.initialize()
     update_target()
 
+    monitor_rewards = [] # a list of rewards of an episode
     episode_rewards = [0.0]
     saved_mean_reward = None
     obs = env.reset()
@@ -248,10 +257,17 @@ def learn(env,
             obs = new_obs
 
             episode_rewards[-1] += rew
+            monitor_rewards.append(rew)
             if done:
                 obs = env.reset()
                 episode_rewards.append(0.0)
+                monitor_rewards = []
                 reset = True
+
+            # Tensorboard dump
+            if t % log_freq == 0:
+                info = {'reward': sum(monitor_rewards), 'episode_length': len(monitor_rewards)}
+                env_summary_logger.add_summary_all(t, [info])
 
             if t > learning_starts and t % train_freq == 0:
                 # Minimize the error in Bellman's equation on a batch sampled from replay buffer.

@@ -86,3 +86,23 @@ class Uint8Input(PlaceholderTfInput):
 
     def get(self):
         return self._output
+
+def create_dirs(dirs):
+    """
+    dirs - a list of directories to create if these directories are not found
+    :param dirs:
+    :return:
+    """
+    try:
+        for dir_ in dirs:
+            if not os.path.exists(dir_):
+                os.makedirs(dir_)
+    except Exception as err:
+        print("Creating directories error: {0}".format(err))
+
+def create_list_dirs(input_dir, prefix_name, count):
+    dirs_path = []
+    for i in range(count):
+        dirs_path.append(input_dir + prefix_name + '-' + str(i))
+        create_dirs([input_dir + prefix_name + '-' + str(i)])
+    return dirs_path
