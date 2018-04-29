@@ -5,6 +5,7 @@ import tensorflow as tf
 import zipfile
 import cloudpickle
 import numpy as np
+from tqdm import tqdm
 
 import gym
 import baselines.common.tf_util as U
@@ -219,7 +220,7 @@ def learn(env,
     with tempfile.TemporaryDirectory() as td:
         model_saved = False
         model_file = os.path.join(td, "model")
-        for t in range(max_timesteps):
+        for t in tqdm(range(max_timesteps)):
             if callback is not None:
                 if callback(locals(), globals()):
                     break
