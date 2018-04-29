@@ -100,8 +100,7 @@ def learn(env,
           prioritized_replay_eps=1e-6,
           param_noise=False,
           callback=None,
-          summary_dir="tensorboard",
-          log_freq=1000):
+          summary_dir="tensorboard"):
     """Train a deepq model.
 
     Parameters
@@ -259,15 +258,15 @@ def learn(env,
             episode_rewards[-1] += rew
             monitor_rewards.append(rew)
             if done:
+                # Tensorboard dump
+                info = {'reward': sum(monitor_rewards), 'episode_length': len(monitor_rewards)}
+                env_summary_logger.add_summary_all(int(t/100), [info]) # divided by 100 to rescale (to make the steps make sense)
+
+                # Reset
                 obs = env.reset()
                 episode_rewards.append(0.0)
                 monitor_rewards = []
                 reset = True
-
-            # Tensorboard dump
-            if t % log_freq == 0:
-                info = {'reward': sum(monitor_rewards), 'episode_length': len(monitor_rewards)}
-                env_summary_logger.add_summary_all(t, [info])
 
             if t > learning_starts and t % train_freq == 0:
                 # Minimize the error in Bellman's equation on a batch sampled from replay buffer.
