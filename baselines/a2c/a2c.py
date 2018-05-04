@@ -13,6 +13,9 @@ from baselines.a2c.utils import discount_with_dones
 from baselines.a2c.utils import Scheduler, make_path, find_trainable_variables
 from baselines.a2c.utils import cat_entropy, mse
 
+from tqdm import tqdm
+
+
 class Model(object):
 
     def __init__(self, policy, ob_space, ac_space, nenvs, nsteps,
@@ -143,7 +146,7 @@ def learn(policy, env, seed, nsteps=5, total_timesteps=int(80e6), vf_coef=0.5, e
 
     nbatch = nenvs*nsteps
     tstart = time.time()
-    for update in range(1, total_timesteps//nbatch+1):
+    for update in tqdm(range(1, total_timesteps//nbatch+1)):
         obs, states, rewards, masks, actions, values = runner.run()
         policy_loss, value_loss, policy_entropy = model.train(obs, states, rewards, masks, actions, values)
         nseconds = time.time()-tstart
@@ -151,6 +154,7 @@ def learn(policy, env, seed, nsteps=5, total_timesteps=int(80e6), vf_coef=0.5, e
         if update % log_interval == 0 or update == 1:
             ev = explained_variance(values, rewards)
             logger.record_tabular("nupdates", update)
+            logger.record_tabular("rewards", sum(rewards))
             logger.record_tabular("total_timesteps", update*nbatch)
             logger.record_tabular("fps", fps)
             logger.record_tabular("policy_entropy", float(policy_entropy))
