@@ -27,6 +27,7 @@ def main():
     parser.add_argument('--logdir', help='Output logs to the folder', type=str, default=None)
     args = parser.parse_args()
     logger.configure(dir=args.logdir)
+    print(">>> Write log to {}".format(logger.get_dir()))
     train(args.env, num_timesteps=args.num_timesteps, seed=args.seed,
         policy=args.policy, lrschedule=args.lrschedule, num_env=args.workers, nsteps=args.nsteps)
 
