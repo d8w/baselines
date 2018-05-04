@@ -12,5 +12,5 @@ policy=lstm
 log_dir=exp/$env-$policy
 model_file=saved/$env-$policy-model
 
-time openai_log_format=$log_format pythonpath=. python baselines/a2c/run_atari.py --env $env --policy $policy --num-timesteps $num_timesteps --logdir=$log_dir --model_file=$model_file
+time OPENAI_LOG_FORMAT=$log_format PYTHONPATH=. python baselines/a2c/run_atari.py --env $env --policy $policy --num-timesteps $num_timesteps --logdir=$log_dir --modelfile=$model_file
 
