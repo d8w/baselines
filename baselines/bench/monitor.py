@@ -27,7 +27,7 @@ class Monitor(Wrapper):
                     filename = filename + "." + Monitor.EXT
             self.f = open(filename, "wt")
             self.f.write('#%s\n'%json.dumps({"t_start": self.tstart, 'env_id' : env.spec and env.spec.id}))
-            self.logger = csv.DictWriter(self.f, fieldnames=('r', 'l', 't')+reset_keywords+info_keywords)
+            self.logger = csv.DictWriter(self.f, fieldnames=('r', 'l', 't', 'i')+reset_keywords+info_keywords)
             self.logger.writeheader()
             self.f.flush()
 
@@ -63,7 +63,7 @@ class Monitor(Wrapper):
             self.needs_reset = True
             eprew = sum(self.rewards)
             eplen = len(self.rewards)
-            epinfo = {"r": round(eprew, 6), "l": eplen, "t": round(time.time() - self.tstart, 6)}
+            epinfo = {"r": round(eprew, 6), "l": eplen, "t": round(time.time() - self.tstart, 6), "i": self.total_steps}
             for k in self.info_keywords:
                 epinfo[k] = info[k]
             self.episode_rewards.append(eprew)
