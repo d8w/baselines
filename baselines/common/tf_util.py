@@ -56,6 +56,7 @@ def make_session(num_cpu=None, make_default=False, graph=None):
         inter_op_parallelism_threads=num_cpu,
         intra_op_parallelism_threads=num_cpu)
     tf_config.gpu_options.allocator_type = 'BFC'
+    tf_config.gpu_options.allow_growth = True
     if make_default:
         return tf.InteractiveSession(config=tf_config, graph=graph)
     else:
@@ -264,7 +265,7 @@ def flattenallbut0(x):
 
 
 # ================================================================
-# Diagnostics 
+# Diagnostics
 # ================================================================
 
 def display_var_info(vars):
