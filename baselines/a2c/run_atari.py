@@ -21,10 +21,11 @@ def main():
     parser = atari_arg_parser()
     parser.add_argument('--policy', help='Policy architecture', choices=['cnn', 'lstm', 'lnlstm'], default='cnn')
     parser.add_argument('--lrschedule', help='Learning rate schedule', choices=['constant', 'linear'], default='constant')
+    parser.add_argument('--workers', help='Number of workers', type=int, default=4)
     args = parser.parse_args()
     logger.configure()
     train(args.env, num_timesteps=args.num_timesteps, seed=args.seed,
-        policy=args.policy, lrschedule=args.lrschedule, num_env=16)
+        policy=args.policy, lrschedule=args.lrschedule, num_env=args.workers)
 
 if __name__ == '__main__':
     main()
