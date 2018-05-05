@@ -38719,3 +38719,75 @@ Logging to exp/MsPacmanNoFrameskip-v4-lstm
 | total_timesteps    | 9678000  |
 | value_loss         | 22.2     |
 ---------------------------------
+---------------------------------
+| explained_variance | 0.973    |
+| fps                | 689      |
+| nupdates           | 484000   |
+| policy_entropy     | 1.5      |
+| total_timesteps    | 9680000  |
+| value_loss         | 0.0195   |
+---------------------------------
+---------------------------------
+| explained_variance | 0.975    |
+| fps                | 689      |
+| nupdates           | 484100   |
+| policy_entropy     | 1.25     |
+| total_timesteps    | 9682000  |
+| value_loss         | 0.0955   |
+---------------------------------
+---------------------------------
+| explained_variance | 0.941    |
+| fps                | 689      |
+| nupdates           | 484200   |
+| policy_entropy     | 1.19     |
+| total_timesteps    | 9684000  |
+| value_loss         | 0.12     |
+---------------------------------
+---------------------------------
+| explained_variance | 0.362    |
+| fps                | 689      |
+| nupdates           | 484300   |
+| policy_entropy     | 1.04     |
+| total_timesteps    | 9686000  |
+| value_loss         | 5.34     |
+---------------------------------
+---------------------------------
+| explained_variance | 0.877    |
+| fps                | 689      |
+| nupdates           | 484400   |
+| policy_entropy     | 1.82     |
+| total_timesteps    | 9688000  |
+| value_loss         | 0.032    |
+---------------------------------
+---------------------------------
+| explained_variance | -0.0416  |
+| fps                | 689      |
+| nupdates           | 484500   |
+| policy_entropy     | 1.35     |
+| total_timesteps    | 9690000  |
+| value_loss         | 6.58     |
+---------------------------------
+---------------------------------
+| explained_variance | 0.877    |
+| fps                | 689      |
+| nupdates           | 484600   |
+| policy_entropy     | 1.42     |
+| total_timesteps    | 9692000  |
+| value_loss         | 1.89     |
+---------------------------------
+---------------------------------
+| explained_variance | 0.997    |
+| fps                | 689      |
+| nupdates           | 484700   |
+| policy_entropy     | 1.46     |
+| total_timesteps    | 9694000  |
+| value_loss         | 0.00762  |
+---------------------------------
+---------------------------------
+| explained_variance | 0.765    |
+| fps                | 689      |
+| nupdates           | 484800   |
+| policy_entropy     | 1.6      |
+| total_timesteps    | 9696000  |
+| value_loss         | 0.0495   |
+---------------------------------

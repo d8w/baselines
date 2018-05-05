@@ -4838,3 +4838,12 @@
 {"nupdates": 483700, "total_timesteps": 9674000, "fps": 689, "policy_entropy": 1.7081577777862549, "value_loss": 0.28198370337486267, "explained_variance": 0.3789736032485962}
 {"nupdates": 483800, "total_timesteps": 9676000, "fps": 689, "policy_entropy": 1.3252098560333252, "value_loss": 0.6707345247268677, "explained_variance": 0.7629014402627945}
 {"nupdates": 483900, "total_timesteps": 9678000, "fps": 689, "policy_entropy": 1.3714830875396729, "value_loss": 22.183815002441406, "explained_variance": -0.12417888641357422}
+{"nupdates": 484000, "total_timesteps": 9680000, "fps": 689, "policy_entropy": 1.500950813293457, "value_loss": 0.019478583708405495, "explained_variance": 0.9728316813707352}
+{"nupdates": 484100, "total_timesteps": 9682000, "fps": 689, "policy_entropy": 1.2523484230041504, "value_loss": 0.09545347839593887, "explained_variance": 0.9750807210803032}
+{"nupdates": 484200, "total_timesteps": 9684000, "fps": 689, "policy_entropy": 1.189113736152649, "value_loss": 0.1203177198767662, "explained_variance": 0.9407911337912083}
+{"nupdates": 484300, "total_timesteps": 9686000, "fps": 689, "policy_entropy": 1.0444366931915283, "value_loss": 5.33800745010376, "explained_variance": 0.36232781410217285}
+{"nupdates": 484400, "total_timesteps": 9688000, "fps": 689, "policy_entropy": 1.817327857017517, "value_loss": 0.03198099881410599, "explained_variance": 0.8770913556218147}
+{"nupdates": 484500, "total_timesteps": 9690000, "fps": 689, "policy_entropy": 1.3534061908721924, "value_loss": 6.575258731842041, "explained_variance": -0.041609883308410645}
+{"nupdates": 484600, "total_timesteps": 9692000, "fps": 689, "policy_entropy": 1.4188873767852783, "value_loss": 1.8869588375091553, "explained_variance": 0.8768216371536255}
+{"nupdates": 484700, "total_timesteps": 9694000, "fps": 689, "policy_entropy": 1.4562324285507202, "value_loss": 0.007620598189532757, "explained_variance": 0.9974807833787054}
+{"nupdates": 484800, "total_timesteps": 9696000, "fps": 689, "policy_entropy": 1.5966942310333252, "value_loss": 0.04947424679994583, "explained_variance": 0.765381321310997}
