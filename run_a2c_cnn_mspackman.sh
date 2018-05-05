@@ -6,8 +6,8 @@ num_timesteps=$TEN_MILLION
 # write log to files and no stdout
 log_format=log,csv,json
 
-env=PongNoFrameskip-v4
-policy=lstm
+env=MsPacmanNoFrameskip-v4
+policy=cnn
 
 log_dir=exp/$env-$policy
 

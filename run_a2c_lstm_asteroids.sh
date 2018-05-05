@@ -1,5 +1,17 @@
-# Write log in Tensorboard format
-# time OPENAI_LOG_FORMAT=tensorboard OPENAI_LOGDIR=pong_dqn PYTHONPATH=. python baselines/deepq/experiments/run_atari.py --prioritized 0
+ONE_MILLION=1000000
+TEN_MILLION=10000000
+HUNDRED_MILLION=100000000
+num_timesteps=$TEN_MILLION
 
-# Write log in CSV
-time PYTHONPATH=. python baselines/a2c/run_atari.py --env AsteroidsNoFrameskip-v0 --policy lstm
+# write log to files and no stdout
+log_format=log,csv,json
+
+env=AsteroidsNoFrameskip-v4
+policy=lstm
+
+log_dir=exp/$env-$policy
+
+model_dir=models/$env-$policy/$env-$policy
+
+time OPENAI_LOG_FORMAT=$log_format PYTHONPATH=. python baselines/a2c/run_atari.py --env $env --policy $policy --num-timesteps $num_timesteps --logdir=$log_dir --modeldir=$model_dir
+

@@ -7,7 +7,7 @@ num_timesteps=$TEN_MILLION
 log_format=log,csv,json
 
 env=PongNoFrameskip-v4
-policy=lstm
+policy=cnn
 
 log_dir=exp/$env-$policy
 
