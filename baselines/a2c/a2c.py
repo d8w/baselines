@@ -88,9 +88,11 @@ class Model(object):
 
 class Runner(AbstractEnvRunner):
 
-    def __init__(self, env, model, nsteps=5, gamma=0.99):
+    def __init__(self, env, model, nsteps=5, gamma=0.99, sigma=0.0):
         super().__init__(env=env, model=model, nsteps=nsteps)
         self.gamma = gamma
+        self.sigma = sigma
+        self.prev_actions = None
 
     def run(self):
         mb_obs, mb_rewards, mb_actions, mb_values, mb_dones = [],[],[],[],[]
@@ -101,7 +103,14 @@ class Runner(AbstractEnvRunner):
             mb_actions.append(actions)
             mb_values.append(values)
             mb_dones.append(self.dones)
-            obs, rewards, dones, _ = self.env.step(actions)
+
+            if self.prev_actions is not None and self.sigma is not None and \
+                    0 < self.sigma and np.random.uniform() < self.sigma:
+                obs, rewards, dones, _ = self.env.step(self.prev_actions)
+            else:
+                obs, rewards, dones, _ = self.env.step(actions)
+                self.prev_actions = actions
+
             self.states = states
             self.dones = dones
             for n, done in enumerate(dones):

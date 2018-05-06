@@ -34,11 +34,11 @@ def mk_model(env_id, num_timesteps, seed, policy, lrschedule, num_env, nsteps):
             nsteps=nsteps)
     return env, nenvs, model
 
-def test(env, nenvs, model, nsteps=5, gamma=0.99, total_timesteps=100000, log_interval=100):
+def test(env, nenvs, model, nsteps=5, gamma=0.99, total_timesteps=100000, log_interval=100, sigma=0.0):
     """
     31 episodes ~ 1,00,000 steps
     """
-    runner = Runner(env, model, nsteps=nsteps, gamma=gamma)
+    runner = Runner(env, model, nsteps=nsteps, gamma=gamma, sigma=sigma)
 
     nbatch = nenvs*nsteps
     tstart = time.time()
@@ -64,7 +64,8 @@ def main():
     parser.add_argument('--nsteps', help='Number of LSTM steps', type=int, default=5)
     parser.add_argument('--logdir', help='Output logs to the folder', type=str, default=None)
     parser.add_argument('--modeldir', help='Save trained model to the dir or load a model from the dir for testing', type=str, default=None)
-    parser.add_argument('--mode', help='', choices=['train', 'test'], default='train')
+    parser.add_argument('--mode', help='Either train or test', choices=['train', 'test'], default='train')
+    parser.add_argument('--sigma', help='probability for taking sticky actions', type=float, default=0.0)
     args = parser.parse_args()
     logger.configure(dir=args.logdir)
     print(">>> Write log to {}".format(logger.get_dir()))
@@ -86,7 +87,7 @@ def main():
                 policy=args.policy, lrschedule=args.lrschedule, num_env=args.workers, nsteps=args.nsteps)
             load_state(args.modeldir)
             # Test
-            test(env, nenvs, model, nsteps=args.nsteps)
+            test(env, nenvs, model, nsteps=args.nsteps, sigma=args.sigma)
         else:
             print(">>> Error: model file is not specified")
 
