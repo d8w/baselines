@@ -1,0 +1,358 @@
+Logging to tests/MsPacmanNoFrameskip-v4-lstm
+------------------------------
+| fps             | 23       |
+| nupdates        | 1        |
+| policy_entropy  | 1.63     |
+| total_timesteps | 20       |
+| value_loss      | 0.00705  |
+------------------------------
+------------------------------
+| fps             | 392      |
+| nupdates        | 100      |
+| policy_entropy  | 1.33     |
+| total_timesteps | 2000     |
+| value_loss      | 0.0802   |
+------------------------------
+------------------------------
+| fps             | 427      |
+| nupdates        | 200      |
+| policy_entropy  | 1.16     |
+| total_timesteps | 4000     |
+| value_loss      | 0.543    |
+------------------------------
+------------------------------
+| fps             | 442      |
+| nupdates        | 300      |
+| policy_entropy  | 1.18     |
+| total_timesteps | 6000     |
+| value_loss      | 31.5     |
+------------------------------
+------------------------------
+| fps             | 450      |
+| nupdates        | 400      |
+| policy_entropy  | 0.817    |
+| total_timesteps | 8000     |
+| value_loss      | 0.591    |
+------------------------------
+------------------------------
+| fps             | 456      |
+| nupdates        | 500      |
+| policy_entropy  | 0.906    |
+| total_timesteps | 10000    |
+| value_loss      | 0.743    |
+------------------------------
+------------------------------
+| fps             | 457      |
+| nupdates        | 600      |
+| policy_entropy  | 1.37     |
+| total_timesteps | 12000    |
+| value_loss      | 1.05     |
+------------------------------
+------------------------------
+| fps             | 462      |
+| nupdates        | 700      |
+| policy_entropy  | 1.21     |
+| total_timesteps | 14000    |
+| value_loss      | 0.135    |
+------------------------------
+------------------------------
+| fps             | 465      |
+| nupdates        | 800      |
+| policy_entropy  | 1.25     |
+| total_timesteps | 16000    |
+| value_loss      | 0.345    |
+------------------------------
+------------------------------
+| fps             | 467      |
+| nupdates        | 900      |
+| policy_entropy  | 1.12     |
+| total_timesteps | 18000    |
+| value_loss      | 0.0507   |
+------------------------------
+------------------------------
+| fps             | 468      |
+| nupdates        | 1000     |
+| policy_entropy  | 1.29     |
+| total_timesteps | 20000    |
+| value_loss      | 0.13     |
+------------------------------
+------------------------------
+| fps             | 468      |
+| nupdates        | 1100     |
+| policy_entropy  | 1.47     |
+| total_timesteps | 22000    |
+| value_loss      | 0.933    |
+------------------------------
+------------------------------
+| fps             | 469      |
+| nupdates        | 1200     |
+| policy_entropy  | 1.35     |
+| total_timesteps | 24000    |
+| value_loss      | 4.21     |
+------------------------------
+------------------------------
+| fps             | 470      |
+| nupdates        | 1300     |
+| policy_entropy  | 1.56     |
+| total_timesteps | 26000    |
+| value_loss      | 0.245    |
+------------------------------
+------------------------------
+| fps             | 471      |
+| nupdates        | 1400     |
+| policy_entropy  | 1.79     |
+| total_timesteps | 28000    |
+| value_loss      | 0.369    |
+------------------------------
+------------------------------
+| fps             | 471      |
+| nupdates        | 1500     |
+| policy_entropy  | 1.13     |
+| total_timesteps | 30000    |
+| value_loss      | 0.151    |
+------------------------------
+------------------------------
+| fps             | 471      |
+| nupdates        | 1600     |
+| policy_entropy  | 0.944    |
+| total_timesteps | 32000    |
+| value_loss      | 37.3     |
+------------------------------
+------------------------------
+| fps             | 471      |
+| nupdates        | 1700     |
+| policy_entropy  | 0.794    |
+| total_timesteps | 34000    |
+| value_loss      | 0.0731   |
+------------------------------
+------------------------------
+| fps             | 472      |
+| nupdates        | 1800     |
+| policy_entropy  | 1.14     |
+| total_timesteps | 36000    |
+| value_loss      | 0.0199   |
+------------------------------
+------------------------------
+| fps             | 472      |
+| nupdates        | 1900     |
+| policy_entropy  | 1.42     |
+| total_timesteps | 38000    |
+| value_loss      | 0.197    |
+------------------------------
+------------------------------
+| fps             | 473      |
+| nupdates        | 2000     |
+| policy_entropy  | 1.62     |
+| total_timesteps | 40000    |
+| value_loss      | 0.4      |
+------------------------------
+------------------------------
+| fps             | 473      |
+| nupdates        | 2100     |
+| policy_entropy  | 1.76     |
+| total_timesteps | 42000    |
+| value_loss      | 0.161    |
+------------------------------
+------------------------------
+| fps             | 473      |
+| nupdates        | 2200     |
+| policy_entropy  | 1.29     |
+| total_timesteps | 44000    |
+| value_loss      | 0.107    |
+------------------------------
+------------------------------
+| fps             | 474      |
+| nupdates        | 2300     |
+| policy_entropy  | 1.18     |
+| total_timesteps | 46000    |
+| value_loss      | 0.0733   |
+------------------------------
+------------------------------
+| fps             | 474      |
+| nupdates        | 2400     |
+| policy_entropy  | 0.813    |
+| total_timesteps | 48000    |
+| value_loss      | 0.344    |
+------------------------------
+------------------------------
+| fps             | 474      |
+| nupdates        | 2500     |
+| policy_entropy  | 1.14     |
+| total_timesteps | 50000    |
+| value_loss      | 29.4     |
+------------------------------
+------------------------------
+| fps             | 475      |
+| nupdates        | 2600     |
+| policy_entropy  | 0.794    |
+| total_timesteps | 52000    |
+| value_loss      | 0.0889   |
+------------------------------
+------------------------------
+| fps             | 475      |
+| nupdates        | 2700     |
+| policy_entropy  | 0.871    |
+| total_timesteps | 54000    |
+| value_loss      | 0.0638   |
+------------------------------
+------------------------------
+| fps             | 476      |
+| nupdates        | 2800     |
+| policy_entropy  | 0.959    |
+| total_timesteps | 56000    |
+| value_loss      | 0.232    |
+------------------------------
+------------------------------
+| fps             | 476      |
+| nupdates        | 2900     |
+| policy_entropy  | 1.36     |
+| total_timesteps | 58000    |
+| value_loss      | 0.896    |
+------------------------------
+------------------------------
+| fps             | 476      |
+| nupdates        | 3000     |
+| policy_entropy  | 1.52     |
+| total_timesteps | 60000    |
+| value_loss      | 0.0715   |
+------------------------------
+------------------------------
+| fps             | 476      |
+| nupdates        | 3100     |
+| policy_entropy  | 0.827    |
+| total_timesteps | 62000    |
+| value_loss      | 0.0298   |
+------------------------------
+------------------------------
+| fps             | 476      |
+| nupdates        | 3200     |
+| policy_entropy  | 1.48     |
+| total_timesteps | 64000    |
+| value_loss      | 0.0362   |
+------------------------------
+------------------------------
+| fps             | 476      |
+| nupdates        | 3300     |
+| policy_entropy  | 1.79     |
+| total_timesteps | 66000    |
+| value_loss      | 0.126    |
+------------------------------
+------------------------------
+| fps             | 477      |
+| nupdates        | 3400     |
+| policy_entropy  | 2        |
+| total_timesteps | 68000    |
+| value_loss      | 0.0943   |
+------------------------------
+------------------------------
+| fps             | 477      |
+| nupdates        | 3500     |
+| policy_entropy  | 1.48     |
+| total_timesteps | 70000    |
+| value_loss      | 0.218    |
+------------------------------
+------------------------------
+| fps             | 477      |
+| nupdates        | 3600     |
+| policy_entropy  | 1.68     |
+| total_timesteps | 72000    |
+| value_loss      | 0.12     |
+------------------------------
+------------------------------
+| fps             | 478      |
+| nupdates        | 3700     |
+| policy_entropy  | 1.53     |
+| total_timesteps | 74000    |
+| value_loss      | 0.0217   |
+------------------------------
+------------------------------
+| fps             | 478      |
+| nupdates        | 3800     |
+| policy_entropy  | 1.48     |
+| total_timesteps | 76000    |
+| value_loss      | 0.582    |
+------------------------------
+------------------------------
+| fps             | 478      |
+| nupdates        | 3900     |
+| policy_entropy  | 1.41     |
+| total_timesteps | 78000    |
+| value_loss      | 1.28     |
+------------------------------
+------------------------------
+| fps             | 478      |
+| nupdates        | 4000     |
+| policy_entropy  | 1.63     |
+| total_timesteps | 80000    |
+| value_loss      | 0.0156   |
+------------------------------
+------------------------------
+| fps             | 478      |
+| nupdates        | 4100     |
+| policy_entropy  | 1.89     |
+| total_timesteps | 82000    |
+| value_loss      | 0.295    |
+------------------------------
+------------------------------
+| fps             | 479      |
+| nupdates        | 4200     |
+| policy_entropy  | 1.95     |
+| total_timesteps | 84000    |
+| value_loss      | 0.0867   |
+------------------------------
+------------------------------
+| fps             | 479      |
+| nupdates        | 4300     |
+| policy_entropy  | 1.49     |
+| total_timesteps | 86000    |
+| value_loss      | 0.0546   |
+------------------------------
+------------------------------
+| fps             | 479      |
+| nupdates        | 4400     |
+| policy_entropy  | 1.79     |
+| total_timesteps | 88000    |
+| value_loss      | 0.0117   |
+------------------------------
+------------------------------
+| fps             | 479      |
+| nupdates        | 4500     |
+| policy_entropy  | 1.53     |
+| total_timesteps | 90000    |
+| value_loss      | 0.199    |
+------------------------------
+------------------------------
+| fps             | 479      |
+| nupdates        | 4600     |
+| policy_entropy  | 1.64     |
+| total_timesteps | 92000    |
+| value_loss      | 0.0027   |
+------------------------------
+------------------------------
+| fps             | 479      |
+| nupdates        | 4700     |
+| policy_entropy  | 1.5      |
+| total_timesteps | 94000    |
+| value_loss      | 0.125    |
+------------------------------
+------------------------------
+| fps             | 479      |
+| nupdates        | 4800     |
+| policy_entropy  | 1.35     |
+| total_timesteps | 96000    |
+| value_loss      | 0.159    |
+------------------------------
+------------------------------
+| fps             | 480      |
+| nupdates        | 4900     |
+| policy_entropy  | 1.42     |
+| total_timesteps | 98000    |
+| value_loss      | 0.0285   |
+------------------------------
+------------------------------
+| fps             | 480      |
+| nupdates        | 5000     |
+| policy_entropy  | 1.6      |
+| total_timesteps | 100000   |
+| value_loss      | 0.066    |
+------------------------------
