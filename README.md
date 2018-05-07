@@ -83,3 +83,6 @@ To cite this repository in publications:
       journal = {GitHub repository},
       howpublished = {\url{https://github.com/openai/baselines}},
     }
+ ## Trained model files
+ The trained model files are of +800 MB.
+ They are stored in [Google Drive/10703 Project Trained Models](https://drive.google.com/drive/u/1/folders/1FhWWuy_JpTOhT0pjBBPNbOVjWxpeP1Yz)
